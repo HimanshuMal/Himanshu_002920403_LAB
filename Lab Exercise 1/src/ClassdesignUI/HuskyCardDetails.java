@@ -251,7 +251,7 @@ public class HuskyCardDetails extends javax.swing.JPanel {
     }//GEN-LAST:event_pacityTextFieldActionPerformed
 
      void display()
-    {
+    {   
         txt_NuId.setText(String.valueOf(student.getNuid()));
         firstnameTextField.setText(this.student.getFirstName()) ;
         lastnameTextField.setText(this.student.getLastName()) ;

@@ -373,6 +373,7 @@
             <Component class="javax.swing.JTextField" name="txt_firstname">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_firstnameActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_firstnameKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_nuid">
@@ -384,18 +385,27 @@
             <Component class="javax.swing.JTextField" name="txt_personalphoneno">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_personalphonenoActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_personalphonenoKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_officeemailid">
             </Component>
             <Component class="javax.swing.JTextField" name="txt_officephoneno">
+              <Events>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_officephonenoKeyPressed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_collegename">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_collegenameActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_collegenameKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_lastname">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_lastnameActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_lastnameKeyPressed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="btn_Submit">
               <Properties>
@@ -493,41 +503,49 @@
             <Component class="javax.swing.JTextField" name="txt_castreetname">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_castreetnameActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_castreetnameKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_caapartmentno">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_caapartmentnoActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_caapartmentnoKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_cacity">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_cacityActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_cacityKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_cazipcode">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_cazipcodeActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_cazipcodeKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_pastreetname">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_pastreetnameActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_pastreetnameKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_paapartment">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_paapartmentActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_paapartmentKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_pacity">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_pacityActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_pacityKeyPressed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txt_pazipcode">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_pazipcodeActionPerformed"/>
+                <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_pazipcodeKeyPressed"/>
               </Events>
             </Component>
           </SubComponents>

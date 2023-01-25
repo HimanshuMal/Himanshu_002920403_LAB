@@ -134,6 +134,11 @@ public class HuskyCardJFrame extends javax.swing.JFrame {
                 txt_firstnameActionPerformed(evt);
             }
         });
+        txt_firstname.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_firstnameKeyPressed(evt);
+            }
+        });
 
         txt_nuid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,10 +156,37 @@ public class HuskyCardJFrame extends javax.swing.JFrame {
                 txt_personalphonenoActionPerformed(evt);
             }
         });
+        txt_personalphoneno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_personalphonenoKeyPressed(evt);
+            }
+        });
+
+        txt_officephoneno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_officephonenoKeyPressed(evt);
+            }
+        });
 
         txt_collegename.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_collegenameActionPerformed(evt);
+            }
+        });
+        txt_collegename.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_collegenameKeyPressed(evt);
+            }
+        });
+
+        txt_lastname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_lastnameActionPerformed(evt);
+            }
+        });
+        txt_lastname.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_lastnameKeyPressed(evt);
             }
         });
 
@@ -201,10 +233,20 @@ public class HuskyCardJFrame extends javax.swing.JFrame {
                 txt_castreetnameActionPerformed(evt);
             }
         });
+        txt_castreetname.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_castreetnameKeyPressed(evt);
+            }
+        });
 
         txt_caapartmentno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_caapartmentnoActionPerformed(evt);
+            }
+        });
+        txt_caapartmentno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_caapartmentnoKeyPressed(evt);
             }
         });
 
@@ -213,10 +255,20 @@ public class HuskyCardJFrame extends javax.swing.JFrame {
                 txt_cacityActionPerformed(evt);
             }
         });
+        txt_cacity.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_cacityKeyPressed(evt);
+            }
+        });
 
         txt_cazipcode.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_cazipcodeActionPerformed(evt);
+            }
+        });
+        txt_cazipcode.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_cazipcodeKeyPressed(evt);
             }
         });
 
@@ -225,10 +277,20 @@ public class HuskyCardJFrame extends javax.swing.JFrame {
                 txt_pastreetnameActionPerformed(evt);
             }
         });
+        txt_pastreetname.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_pastreetnameKeyPressed(evt);
+            }
+        });
 
         txt_paapartment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_paapartmentActionPerformed(evt);
+            }
+        });
+        txt_paapartment.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_paapartmentKeyPressed(evt);
             }
         });
 
@@ -237,10 +299,20 @@ public class HuskyCardJFrame extends javax.swing.JFrame {
                 txt_pacityActionPerformed(evt);
             }
         });
+        txt_pacity.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_pacityKeyPressed(evt);
+            }
+        });
 
         txt_pazipcode.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txt_pazipcodeActionPerformed(evt);
+            }
+        });
+        txt_pazipcode.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_pazipcodeKeyPressed(evt);
             }
         });
 
@@ -434,6 +506,17 @@ public class HuskyCardJFrame extends javax.swing.JFrame {
 
     private void btn_SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SubmitActionPerformed
         // TODO add your handling code here:
+        
+        if(txt_nuid.getText().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Some fields are remaining");   
+        }
+        else if(txt_officephoneno.getText().isEmpty())
+        {
+        JOptionPane.showMessageDialog(null, "Some fields are remaining ");   
+        }
+        else if(txt_personalphoneno.getText().isEmpty())
+        { JOptionPane.showMessageDialog(null, "Some fields are remaining "); 
+        }
         long nuid = Long.valueOf(txt_nuid.getText()) ;
         String firstName = txt_firstname.getText() ;
         String lastName = txt_lastname.getText() ;
@@ -450,6 +533,7 @@ public class HuskyCardJFrame extends javax.swing.JFrame {
         String permanentAddressApartmentNo = txt_paapartment.getText() ;
         String permanentAddressCity = txt_pacity.getText() ;
         String permanentAddressZipCode = txt_pazipcode.getText() ;
+        
       
         student.setNuid(nuid);
         student.setFirstName(firstName);
@@ -478,9 +562,14 @@ public class HuskyCardJFrame extends javax.swing.JFrame {
         permanentAddress.setCity(permanentAddressCity);
         permanentAddress.setZipCode(permanentAddressZipCode);
         
-        
-        HuskyCardDetails HC = new HuskyCardDetails(student);
+         if( !firstName.isEmpty() && !lastName.isEmpty() && !collegeName.isEmpty() && !officeEmailId.isEmpty() && !personalEmailId.isEmpty() && !currentAddressStreetName.isEmpty() && !currentAddressApartmentNo.isEmpty() && !currentAddressCity.isEmpty() && !currentAddressZipCode.isEmpty() && !permanentAddressStreetName.isEmpty() && !permanentAddressApartmentNo.isEmpty() && !permanentAddressCity.isEmpty() && !permanentAddressZipCode.isEmpty())        
+        {HuskyCardDetails HC = new HuskyCardDetails(student);
         jSplitPane2.setRightComponent(HC);
+        }
+        else
+        { JOptionPane.showMessageDialog(null, "Enter correct value in all the fields");}
+        
+       
         
        txt_nuid.setText("");
        txt_firstname.setText("");
@@ -552,7 +641,168 @@ public class HuskyCardJFrame extends javax.swing.JFrame {
 
     private void txt_nuidKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_nuidKeyPressed
         // TODO add your handling code here:
+        char c =evt.getKeyChar();
+        if(Character.isDigit(c)||Character.isISOControl(c)){
+            txt_nuid.setEditable(true);
+        }
+        else{
+            txt_nuid.setEditable(false);
+        }
     }//GEN-LAST:event_txt_nuidKeyPressed
+
+    private void txt_firstnameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_firstnameKeyPressed
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+         if(Character.isLetter(c)||Character.isWhitespace(c)||Character.isISOControl(c))
+        {
+            txt_firstname.setEditable(true);
+        }
+        else{
+          txt_firstname.setEditable(false);
+    }
+    }//GEN-LAST:event_txt_firstnameKeyPressed
+
+    private void txt_lastnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_lastnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_lastnameActionPerformed
+
+    private void txt_lastnameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_lastnameKeyPressed
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+         if(Character.isLetter(c)||Character.isWhitespace(c)||Character.isISOControl(c))
+        {
+            txt_lastname.setEditable(true);
+        }
+        else{
+          txt_lastname.setEditable(false);
+    }
+    }//GEN-LAST:event_txt_lastnameKeyPressed
+
+    private void txt_collegenameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_collegenameKeyPressed
+        // TODO add your handling code here:
+         char c = evt.getKeyChar();
+         if(Character.isLetter(c)||Character.isWhitespace(c)||Character.isISOControl(c))
+        {
+            txt_collegename.setEditable(true);
+        }
+        else{
+          txt_collegename.setEditable(false);
+    }
+    }//GEN-LAST:event_txt_collegenameKeyPressed
+
+    private void txt_officephonenoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_officephonenoKeyPressed
+        // TODO add your handling code here:
+         char c =evt.getKeyChar();
+        if(Character.isDigit(c)||Character.isISOControl(c)){
+            txt_officephoneno.setEditable(true);
+        }
+        else{
+            txt_officephoneno.setEditable(false);
+        }
+    }//GEN-LAST:event_txt_officephonenoKeyPressed
+
+    private void txt_personalphonenoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_personalphonenoKeyPressed
+        // TODO add your handling code here:
+         char c =evt.getKeyChar();
+        if(Character.isDigit(c)||Character.isISOControl(c)){
+            txt_personalphoneno.setEditable(true);
+        }
+        else{
+            txt_personalphoneno.setEditable(false);
+        }
+    }//GEN-LAST:event_txt_personalphonenoKeyPressed
+
+    private void txt_castreetnameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_castreetnameKeyPressed
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+         if(Character.isLetter(c)||Character.isWhitespace(c)||Character.isISOControl(c))
+        {
+            txt_castreetname.setEditable(true);
+        }
+        else{
+          txt_castreetname.setEditable(false);
+    }
+    }//GEN-LAST:event_txt_castreetnameKeyPressed
+
+    private void txt_caapartmentnoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_caapartmentnoKeyPressed
+        // TODO add your handling code here:
+        char c =evt.getKeyChar();
+        if(Character.isDigit(c)||Character.isISOControl(c)){
+            txt_caapartmentno.setEditable(true);
+        }
+        else{
+            txt_caapartmentno.setEditable(false);
+        }
+    }//GEN-LAST:event_txt_caapartmentnoKeyPressed
+
+    private void txt_cacityKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_cacityKeyPressed
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+         if(Character.isLetter(c)||Character.isWhitespace(c)||Character.isISOControl(c))
+        {
+            txt_cacity.setEditable(true);
+        }
+        else{
+          txt_cacity.setEditable(false);
+    }
+    }//GEN-LAST:event_txt_cacityKeyPressed
+
+    private void txt_cazipcodeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_cazipcodeKeyPressed
+        // TODO add your handling code here:
+         char c =evt.getKeyChar();
+        if(Character.isDigit(c)||Character.isISOControl(c)){
+            txt_cazipcode.setEditable(true);
+        }
+        else{
+            txt_cazipcode.setEditable(false);
+        }
+    }//GEN-LAST:event_txt_cazipcodeKeyPressed
+
+    private void txt_pastreetnameKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_pastreetnameKeyPressed
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+         if(Character.isLetter(c)||Character.isWhitespace(c)||Character.isISOControl(c))
+        {
+            txt_pastreetname.setEditable(true);
+        }
+        else{
+          txt_pastreetname.setEditable(false);
+    }
+    }//GEN-LAST:event_txt_pastreetnameKeyPressed
+
+    private void txt_paapartmentKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_paapartmentKeyPressed
+        // TODO add your handling code here:
+        char c =evt.getKeyChar();
+        if(Character.isDigit(c)||Character.isISOControl(c)){
+            txt_paapartment.setEditable(true);
+        }
+        else{
+            txt_paapartment.setEditable(false);
+        }
+    }//GEN-LAST:event_txt_paapartmentKeyPressed
+
+    private void txt_pacityKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_pacityKeyPressed
+        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+         if(Character.isLetter(c)||Character.isWhitespace(c)||Character.isISOControl(c))
+        {
+            txt_pacity.setEditable(true);
+        }
+        else{
+          txt_pacity.setEditable(false);
+    }
+    }//GEN-LAST:event_txt_pacityKeyPressed
+
+    private void txt_pazipcodeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_pazipcodeKeyPressed
+        // TODO add your handling code here:
+        char c =evt.getKeyChar();
+        if(Character.isDigit(c)||Character.isISOControl(c)){
+            txt_pazipcode.setEditable(true);
+        }
+        else{
+            txt_pazipcode.setEditable(false);
+        }
+    }//GEN-LAST:event_txt_pazipcodeKeyPressed
      
    
     /**
